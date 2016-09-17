@@ -11,78 +11,105 @@
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{你的大名}
+\name{Nico   \faFemale}
 
 % {E-mail}{mobilephone}{homepage}
 % be careful of _ in emaill address
-\contactInfo{my\_address@yuanbin.me}{(+86) 131-221-87xxx}{http://www.yuanbin.me}
+\contactInfo{yu.nico.zhou@gmail.com}{(+86) 155-xxxx-xxxx}{}
 % {E-mail}{mobilephone}
 % keep the last empty braces!
 %\contactInfo{xxx@yuanbin.me}{(+86) 131-221-87xxx}{}
  
 \section{\faGraduationCap\  教育背景}
-\datedsubsection{\textbf{上海交通大学}, 上海}{2013 -- 至今}
-\textit{在读硕士研究生}\ 信息与通信工程, 预计 2016 年 3 月毕业
-\datedsubsection{\textbf{西安电子科技大学}, 西安, 陕西}{2009 -- 2013}
-\textit{学士}\ 通信工程
+ \begin{tabbing}
+        
+		\hspace{7.2cm} \= \hspace{1cm} \= \hspace{1.8cm} \=\hspace{3.4cm}  \= \hspace{1cm} \= \kill % Spacing within the block
+	
+		\large\textbf{东北大学\&\href{http://www.sia.cn/}{中科院沈阳自动化研究所}} \>  \large{硕士} \> \large{控制工程} \>\large{专业排名: 4/196} \> \large{2014.09 -- 2017.01}\\[0.2cm]
+		
+		\large\textbf{东北大学秦皇岛分校} \> \large{学士}\>\large{自动化}\>\large{专业排名:  10/168} \> \large{2010.09 -- 2014.06}
 
-\section{\faUsers\ 实习/项目经历}
-\datedsubsection{\textbf{黑科技公司} 上海}{2015年3月 -- 2015年5月}
-\role{实习}{经理: 高富帅}
-xxx后端开发
-\begin{itemize}
-  \item 实现了 xxx 特性
-  \item 后台资源占用率减少8\%
-  \item xxx
-\end{itemize}
+  \end{tabbing}
 
-\datedsubsection{\textbf{分布式科学上网姿势}}{2014年6月 -- 至今}
-\role{Golang, Linux}{个人项目，和富帅糕合作开发}
+\section{\faBook\ 项目经历}
+\datedsubsection{\href{http://weain.mil.cn/cggg/zbgg/524444.html}{\textbf{“跨越险阻-2016”地面无人系统挑战赛}}}{2016.04 -- 2016.09}
+在团队中负责gps缺失环境下的无人车定位导航及部分激光环境建模工作
 \begin{onehalfspacing}
-分布式负载均衡科学上网姿势, https://github.com/cyfdecyf/cow
 \begin{itemize}
-  \item 修复了连接未正常关闭导致文件描述符耗尽的 bug
-  \item 使用Chord 哈希 URL, 实现稳定可靠地分流
-  \item xxx (尽量使用量化的客观结果)
+  \item 使用64线，32线，单线激光数据融合后进行障碍物检测，构建障碍物层环境地图信息
+  \item 分别使用基于双目的orb-slam和lidar odometry实现无gps环境下的无人车定位
+  \item 使用ros中的robot\_localization包融合里程计和惯导模块数据
 \end{itemize}
 \end{onehalfspacing}
 
-\datedsubsection{\textbf{\LaTeX\ 简历模板}}{2015 年5月 -- 至今}
-\role{\LaTeX, Python}{个人项目}
-\begin{onehalfspacing}
-优雅的 \LaTeX\ 简历模板, https://github.com/billryan/resume
+\datedsubsection{\textbf{基于视觉与IMU融合的无人机定位导航}}{2015.12 -- 2016.12}
+\begin{onehalfspacing} 
+视觉SLAM相关算法研究
 \begin{itemize}
-  \item 容易定制和扩展
-  \item 完善的 Unicode 字体支持，使用 \XeLaTeX\ 编译
-  \item 支持 FontAwesome 4.5.0
+  \item 熟悉多视几何相关算法
+  \item 熟悉IMU姿态滤波算法，包括梯度下降法、矢量叉乘法、EKF等
+  \item 了解SLAM算法框架及orb-slam、lsd-slam等开源SLAM项目
 \end{itemize}
 \end{onehalfspacing}
 
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
+\datedsubsection{\href{http://www.uavgp.com.cn/index.html}{\textbf{中航工业杯第三届国际无人飞行器创新大奖赛竞技旋翼类}}}{2015.06 -- 2015.10}
+\begin{onehalfspacing}
+在团队中担任视觉引导程序开发。基于pixhawk飞控完成根据地面移动平台上的圆形标志物获取动平台相对无人机的位姿并进行跟踪，引导无人机抓取目标的任务
+\begin{itemize}
+  \item 实现椭圆、二维码等标志物的检测识别
+  \item 实现移动标志物相对飞机位姿的获取
+  \item 研读PIXHAWK、PX4FLOW等相关代码，能够实现对PIXHAWK进行二次开发
+  \item 比赛视觉部分的工作发表EI论文一篇”A Robust Real-Time Vision based GPS-denied Navigation System of UAV”
+\end{itemize}
+\end{onehalfspacing}
 
-\section{\faCogs\ IT 技能}
+\datedsubsection{\textbf{无人机的飞控地面站开发}}{2014.12 -- 2015.01}
+\begin{onehalfspacing}
+基于QT使用C++完成地面站开发，能够实现起飞状态判定，传感器参数显示、飞行模式设
+定、相关参数设定、二维数据曲线绘制和三维姿态实时显示等功能
+\end{onehalfspacing}
+
+\section{\faEye \ 实习经历}
+\datedsubsection{\textbf{大疆创新科技有限公司}，深圳}{2014.07 -- 2014.08}
+负责惯性传感器测试部分工作，了解加速度计、陀螺仪、磁罗盘等相关传感器原理，参与设计测试方案并进行对比测试
+
+\section{\faCheck\ 技能清单}
 % increase linespacing [parsep=0.5ex]
-\begin{itemize}[parsep=0.5ex]
-  \item 编程语言: C == Python > C++ > Java
-  \item 平台: Linux
-  \item 开发: xxx
+\begin{itemize}%[parsep=0.5ex]
+  \item 编程语言: C/C++ > Python
+  \item 工具:
+    \begin{itemize}
+        \item[-] 熟练使用ROS，能独立进行相关功能package的开发以及msg、cfg、rqt相关工具的熟练使用
+        \item[-] 掌握linux下的程序开发，熟悉Cmake
+        \item[-] 熟练使用OpenCV、PCL、Eigen等常用库
+        \item[-] 熟悉qt界面开发
+    \end{itemize}
+  \item 算法:
+    \begin{itemize}
+        \item[-] 熟悉视觉VO/SLAM算法
+        \item[-] 熟悉常用的优化求解方法
+        \item[-] 熟悉IMU姿态滤波算法
+        \item[-] 了解机器学习相关基础算法
+    \end{itemize}
+  \item 传感器: 熟悉双目、IMU、激光雷达
 \end{itemize}
 
-\section{\faHeartO\ 获奖情况}
-\datedline{\textit{第一名}, xxx 比赛}{2013 年6 月}
-\datedline{其他奖项}{2015}
+\section{\faMapO\ 获奖情况}
+\datedline{中航工业杯第三届无人飞行器创新大奖赛竞技旋翼类二等奖}{2015.10}
+\datedline{校一等奖学金}{2015.09}
+\datedline{河北省优秀毕业生称号}{2014.06}
+\datedline{全国大学生电子设计竞赛国家二等奖}{2013.09}
 
-\section{\faInfo\ 其他}
+
+\section{\faComment \ 个人总结}
+具有较强的自学能力及适应能力，能够对新鲜事物保持好奇心，爱好阅读、学习、运动和旅行
+
+\section{\faInfoCircle \ 其它}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.5ex]
-  \item 技术博客: http://blog.yours.me
-  \item GitHub: https://github.com/username
-  \item 语言: 英语 - 熟练(TOEFL xxx)
+  \item 技术博客: 
+  \item GitHub: \href{https://github.com/NicoChou}{https://github.com/NicoChou}
+  \item 语言: 英语 - 能够熟练阅读专业相关英文文献书籍技术文档，具备较好的口语交际能力
 \end{itemize}
 
 %% Reference
@@ -90,3 +117,4 @@ xxx后端开发
 %\bibliographystyle{IEEETran}
 %\bibliography{mycite}
 \end{document}
+

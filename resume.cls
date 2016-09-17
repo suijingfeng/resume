@@ -14,6 +14,9 @@
 %\RequirePackage[usenames,dvipsnames]{xcolor}
 % loading fonts
 \RequirePackage{fontspec}
+\usepackage{color} % Required for custom colors
+\definecolor{slateblue}{rgb}{0.17,0.22,0.34}
+\usepackage{hyperref}
 % Main document font
 \setmainfont[
   Path = fonts/Main/ ,
@@ -43,15 +46,15 @@
 \RequirePackage[super]{nth}
 
 \titleformat{\section}         % Customise the \section command 
-  {\Large\scshape\raggedright} % Make the \section headers large (\Large),
+  { \color{slateblue} \Large\scshape\raggedright} % Make the \section headers large (\Large),
                                % small capitals (\scshape) and left aligned (\raggedright)
   {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
   {}                           % Can be used to insert code before the heading
-  [\titlerule]                 % Inserts a horizontal line after the heading
+ % [\titlerule]                 % Inserts a horizontal line after the heading
 \titlespacing*{\section}{0cm}{*1.8}{*1.8}
 
 \titleformat{\subsection}
-  {\large\raggedright}
+  { \large\raggedright }
   {}{0em}
   {}
 \titlespacing*{\subsection}{0cm}{*1.8}{*0.6}
@@ -67,8 +70,9 @@
 }
 
 \newcommand{\name}[1]{
-  \centerline{\Huge\scshape{#1}}
+  \centerline{\color{slateblue}\Huge\scshape{#1}}
   \vspace{1.25ex}
+  
 }
 
 \newcommand{\contactInfo}[3]{
@@ -84,3 +88,4 @@
   {\par \textit{#1} ~ #2 \par}
   \vspace{0.85ex}
 }
+
